@@ -1,6 +1,5 @@
 require 'spec_helper'
-require 'user'
 
 describe User do
-  user = User.new
+  pending "add some examples to (or delete) #{__FILE__}"
 end
