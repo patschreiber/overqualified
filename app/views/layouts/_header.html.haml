@@ -1,12 +1,27 @@
 %nav{ :class => "navbar navbar-default navbar-fixed-top" }
   .container
     .navbar-header
+      %button{ :class => "navbar-toggle btn btn-warning", :data => { :toggle => 'collapse', :target => '#collapsed-header' } }
+        %span{ :class => 'ss-icon header-icons' }
+          &#x2026;
+
+
       = link_to "Overqualified.", root_path, :class => "navbar-brand"
 
-    %ul{ :class => "nav navbar-nav navbar-right" }
-      %li
-        %button{ :class => "btn btn-default navbar-btn" }
-          Sign in
-      %li
-        %p{ :class => "navbar-text" }
-          Welcome, user
+    - if user_signed_in?
+      .collapse.navbar-collapse#collapsed-header
+        %ul{ :class => "nav navbar-nav navbar-right" }
+          %li
+            %p{ :class => "navbar-text" }
+              Welcome, user
+
+    - else
+      .collapse.navbar-collapse#collapsed-header
+        %ul{ :class => "nav navbar-nav navbar-right" }
+          %li
+            MEN'S
+          %li
+            WOMEN'S
+          %li
+            %button{ :class => "btn btn-default navbar-btn" }
+              Sign in
