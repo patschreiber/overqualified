@@ -1,8 +1,33 @@
+@import 'bootstrap';
 @import 'colors';
 @import 'fonts';
 
 
 body {
+  font-family: "ProximaNova", 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  
   /* padding used for fixed top menu */
-  padding-top: 70px;
+  padding-top: 100px;
+}
+
+
+.navbar {
+  .navbar-brand {
+    img {
+      height: 125px;
+    }
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+   .collapse {
+      display: none !important;
+   }
 }

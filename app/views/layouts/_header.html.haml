@@ -1,12 +1,12 @@
 %nav{ :class => "navbar navbar-default navbar-fixed-top" }
-  .container
+  .container-fluid
     .navbar-header
       %button{ :class => "navbar-toggle btn btn-warning", :data => { :toggle => 'collapse', :target => '#collapsed-header' } }
         %span{ :class => 'ss-icon header-icons' }
           &#x2026;
 
-
-      = link_to "Overqualified.", root_path, :class => "navbar-brand"
+      = link_to  root_path, :class => "navbar-brand" do
+        = image_tag("branding/OQ_fulllogo.svg")
 
     - if user_signed_in?
       .collapse.navbar-collapse#collapsed-header
@@ -17,11 +17,12 @@
 
     - else
       .collapse.navbar-collapse#collapsed-header
-        %ul{ :class => "nav navbar-nav navbar-right" }
+        %ul{ :class => "nav navbar-nav" }
           %li
-            MEN'S
+            = link_to "SHIRTS", "#"
           %li
-            WOMEN'S
+            = link_to "SHOP", "#"
           %li
-            %button{ :class => "btn btn-default navbar-btn" }
-              Sign in
+            = link_to "SHOP", "#"
+          %li 
+            = link_to "SHOP", "#"

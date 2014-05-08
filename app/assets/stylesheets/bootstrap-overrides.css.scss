@@ -1,0 +1,22 @@
+
+/* Use this CSS to:;
+   - Center the navbar brand for bootstrap
+   - Center the links 
+ */
+.navbar {
+  .navbar-header {
+    text-align: center;
+    width: 100%;
+
+    .navbar-brand {
+      float:none;
+    }
+  }
+
+  .navbar-nav{
+      margin: 0 auto;
+      display: table;
+      table-layout: fixed;
+      float:none;
+  }
+}

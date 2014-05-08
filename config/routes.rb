@@ -1,5 +1,17 @@
 Overqualified::Application.routes.draw do
   devise_for :users
+
+  devise_scope :user do 
+    match '/signup' => 'devise/registrations#new', via: 'get', :as => :signup
+    match '/sign-up' => 'devise/registrations#new', via: 'get'
+    match '/sign_up' => 'devise/registrations#new', via: 'get'
+
+    match '/signin' => 'devise/sessions#new', via: 'get', :as => :signin
+    match '/sign-in' => 'devise/sessions#new', via: 'get'
+    match '/sign_in' => 'devise/sessions#new', via: 'get'
+
+    match '/logout' => 'devise/sessions#destroy', via: 'delete', :as => :logout
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
