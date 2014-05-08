@@ -5,24 +5,38 @@
         %span{ :class => 'ss-icon header-icons' }
           &#x2026;
 
-      = link_to  root_path, :class => "navbar-brand" do
+      = link_to "BROWSE", "#", :class => "nav-item-left"
+      = link_to root_path, :class => "navbar-brand" do
         = image_tag("branding/OQ_fulllogo.svg")
+      = link_to "BUY", "#", :class => "nav-item-right"
 
-    - if user_signed_in?
-      .collapse.navbar-collapse#collapsed-header
-        %ul{ :class => "nav navbar-nav navbar-right" }
-          %li
-            %p{ :class => "navbar-text" }
-              Welcome, user
 
-    - else
-      .collapse.navbar-collapse#collapsed-header
-        %ul{ :class => "nav navbar-nav" }
-          %li
-            = link_to "SHIRTS", "#"
-          %li
-            = link_to "SHOP", "#"
-          %li
-            = link_to "SHOP", "#"
-          %li 
-            = link_to "SHOP", "#"
+
+
+
+
+
+
+
+
+
+
+
+-#    - if user_signed_in?
+-#      .collapse.navbar-collapse#collapsed-header
+-#        %ul{ :class => "nav navbar-nav navbar-right" }
+-#          %li
+-#            %p{ :class => "navbar-text" }
+-#              Welcome, user
+-#
+-#    - else
+-#      .collapse.navbar-collapse#collapsed-header
+-#        %ul{ :class => "nav navbar-nav" }
+-#          %li
+-#            = link_to "SHIRTS", "#"
+-#          %li
+-#            = link_to "SHOP", "#"
+-#          %li
+-#            = link_to "SHOP", "#"
+-#          %li 
+-#            = link_to "SHOP", "#"
