@@ -1,8 +1,12 @@
-.navbar.navbar-default.navbar-fixed-top
-  .container-fluid
+%nav{ :class => "navbar navbar-default navbar-fixed-top" }
+  .container
     .navbar-header
-      = link_to "Overqualified.", "#", :class => "navbar-brand"
-      %button{ :class => "btn btn-default navbar-btn navbar-left" }
-        Sign in
-      %p{ :class => "navbar-text navbar-right" }
-        Welcome, user
+      = link_to "Overqualified.", root_path, :class => "navbar-brand"
+
+    %ul{ :class => "nav navbar-nav navbar-right" }
+      %li
+        %button{ :class => "btn btn-default navbar-btn" }
+          Sign in
+      %li
+        %p{ :class => "navbar-text" }
+          Welcome, user
