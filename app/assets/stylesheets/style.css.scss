@@ -51,6 +51,7 @@ h6 {
 
 
 .navbar {
+
   border-bottom: 4px solid $main_green;
 
   a {
@@ -64,8 +65,11 @@ h6 {
 
   .navbar-header {
     margin: 0;
+    text-align: center;
+    width: 100%;
 
     .navbar-brand {
+      float: none;
       img {
         height: $current_nav_height;
       }
@@ -113,7 +117,7 @@ body.landing_page {
     background-size: cover;
     position: fixed;
     width: 100%;
-    height: 90%; /*same height as jumbotron */
+    height: 95%; /*same height as jumbotron */
     top:0;
     left:0;
     z-index: -1;
@@ -121,7 +125,7 @@ body.landing_page {
 
   .main-jumbotron {
     padding-top: $current_nav_height + 30px;
-    height: 90%;
+    height: 95%;
     color: #FFF;
     background: transparent;
     margin: 0;
