@@ -44,24 +44,44 @@ h6 {
   font-size: 12px;
 }
 
-.navbar {
-  border-bottom: 4px solid $main_green;
 
-  .navbar-brand {
-    img {
-      height: 125px;
-    }
-  }
+.navbar {
+  $current_nav_height: 125px;
+  border-bottom: 4px solid $main_green;
 
   a {
     font-size: 18px;
   }
 
-  .nav-item-left {
-    margin-right: 60px;
+  .container-fluid {
+    padding: 0;
   }
-  .nav-item-right {
-    margin-left: 60px;
+
+
+  .navbar-header {
+    margin: 0;
+
+    .navbar-brand {
+      img {
+        height: $current_nav_height;
+      }
+    }
+
+    .nav-item-left {
+      margin-right: 60px;
+    }
+    .nav-item-right {
+      margin-left: 60px;
+    }
+  }
+
+  .navbar-toggle {
+    background-color: $main_green;
+    border: 0px;
+    border-radius: 0;
+    height: $current_nav_height;
+    width:50px;
+    margin: 0 0 0 0;
   }
 }
 
@@ -73,28 +93,10 @@ h6 {
 
 
 @media (max-width: 480px) {
-  .navbar-header {
-    float: none;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-collapse.collapse {
-    display: none!important;
-  }
-  .navbar-nav {
-    float: none!important;
-    margin: 7.5px -15px;
-  }
-  .navbar-nav>li {
-    float: none;
-  }
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+
 }
+
+
+
+
+
