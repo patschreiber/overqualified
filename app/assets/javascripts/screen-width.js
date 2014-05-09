@@ -5,8 +5,26 @@
 
 $(document).ready(function() {
 
-  if (screen.width < 768) {
-    $('.navbar-toggle').fadeIn(); 
+  if ($(this).width() < 768) {
+    $('.navbar-toggle').show();
+  }
+  else {
+    $('.navbar-toggle')
   }
 
+
+  $(window).on('resize', function() {
+
+    if ($(this).width() < 768) {
+      if ($('.navbar-toggle').is(':hidden')) {
+        $('.navbar-toggle').fadeIn();
+      }
+    }
+    else {
+      if ($('.navbar-toggle').is(':visible')) {
+        $('.navbar-toggle').fadeOut();
+      }
+    }
+
+  });
 });

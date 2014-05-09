@@ -2,13 +2,18 @@
 @import 'colors';
 @import 'fonts';
 
+$current_nav_height: 125px;
+
+html, body {
+  height: 100%;
+}
 
 body {
   background-color: #000;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   
-  /* padding used for fixed top menu */
-  padding-top: 179px;
+  /* padding used for fixed top menu 
+  padding-top: $current_nav_height; */
 
   p {
     font-size: 18px;
@@ -46,7 +51,6 @@ h6 {
 
 
 .navbar {
-  $current_nav_height: 125px;
   border-bottom: 4px solid $main_green;
 
   a {
@@ -68,10 +72,10 @@ h6 {
     }
 
     .nav-item-left {
-      margin-right: 60px;
+      margin-right: 75px;
     }
     .nav-item-right {
-      margin-left: 60px;
+      margin-left: 75px;
     }
   }
 
@@ -79,21 +83,55 @@ h6 {
     background-color: $main_green;
     border: 0px;
     border-radius: 0;
+    color: #FFF;
+    display: none;
+    font-size: 12px;
     height: $current_nav_height;
-    width:50px;
+    width: 60px;
     margin: 0 0 0 0;
+
+    &:hover, &:focus {
+      background-color: darken($main_green, 5%);
+    }
+
+    .ss-icon {
+      font-size: 18px;
+    }
   }
 }
 
 .navbar-default {
   background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.975);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 
+body.landing_page {
 
-@media (max-width: 480px) {
+  .bg {
+    background: url(stock_photos/landscape_test_image.jpg) no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 90%; /*same height as jumbotron */
+    top:0;
+    left:0;
+    z-index: -1;
+  }
 
+  .main-jumbotron {
+    padding-top: $current_nav_height + 30px;
+    height: 90%;
+    color: #FFF;
+    background: transparent;
+    margin: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+      display: inline;
+      background-color: #000;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+  }
 }
 
 
