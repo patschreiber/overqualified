@@ -51,6 +51,7 @@ h6 {
 
 
 .navbar {
+  height: $current_nav_height;
 
   border-bottom: 4px solid $main_green;
 
@@ -60,46 +61,33 @@ h6 {
 
   .container-fluid {
     padding: 0;
+
+    ul {
+      margin: 0 auto;
+    }
   }
 
-
-  .navbar-header {
-    margin: 0;
+  ul.logo-nav {
     text-align: center;
+    padding: 0;
     width: 100%;
 
-    .navbar-brand {
-      float: none;
+    li {
+      display: inline;
+    }
+
+    #logo {
       img {
         height: $current_nav_height;
       }
     }
 
-    .nav-item-left {
+    .left {
       margin-right: 75px;
     }
-    .nav-item-right {
+
+    .right {
       margin-left: 75px;
-    }
-  }
-
-  .navbar-toggle {
-    background-color: $main_green;
-    border: 0px;
-    border-radius: 0;
-    color: #FFF;
-    display: none;
-    font-size: 12px;
-    height: $current_nav_height;
-    width: 60px;
-    margin: 0 0 0 0;
-
-    &:hover, &:focus {
-      background-color: darken($main_green, 5%);
-    }
-
-    .ss-icon {
-      font-size: 18px;
     }
   }
 }
@@ -117,7 +105,7 @@ body.landing_page {
     background-size: cover;
     position: fixed;
     width: 100%;
-    height: 95%; /*same height as jumbotron */
+    height: 650px; /*same height as jumbotron */
     top:0;
     left:0;
     z-index: -1;
@@ -125,7 +113,7 @@ body.landing_page {
 
   .main-jumbotron {
     padding-top: $current_nav_height + 30px;
-    height: 95%;
+    height: 650px;
     color: #FFF;
     background: transparent;
     margin: 0;
@@ -135,6 +123,13 @@ body.landing_page {
       background-color: #000;
       font-family: Helvetica, Arial, sans-serif;
     }
+  }
+}
+
+
+@media (max-width: 599px) {
+  .nav-item-right, .nav-item-left {
+    display: none;
   }
 }
 

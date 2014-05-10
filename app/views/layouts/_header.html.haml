@@ -1,17 +1,13 @@
 %nav{ :class => "navbar navbar-default navbar-fixed-top" }
   .container-fluid
-    .navbar-header
-      %button{ :class => "navbar-toggle btn btn-warning", :data => { :toggle => 'collapse', :target => '#collapsed-header' } }
-        .ss-icon.ss-rows
-        MENU
-
-        
-      = link_to "BROWSE", "#", :class => "nav-item-left"
-      = link_to root_path, :class => "navbar-brand" do
-        = image_tag("branding/OQ_fulllogo.svg")
-      = link_to "BUY", "#", :class => "nav-item-right"
-
-
+    %ul.logo-nav
+      %li.left
+        = link_to "BROWSE", "#"
+      %li
+        = link_to root_path, :id => "logo" do
+          = image_tag("branding/OQ_fulllogo.svg")
+      %li.right
+        = link_to "BUY", "#"
 
 
 
