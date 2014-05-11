@@ -52,7 +52,6 @@ h6 {
 
 .navbar {
   height: $current_nav_height;
-
   border-bottom: 4px solid $main_green;
 
   a {
@@ -67,16 +66,16 @@ h6 {
     }
   }
 
+  ul li {
+    display: inline;
+  }
+
   ul.logo-nav {
     text-align: center;
     padding: 0;
     width: 100%;
 
-    li {
-      display: inline;
-    }
-
-    #logo {
+    .logo {
       img {
         height: $current_nav_height;
       }
@@ -88,6 +87,12 @@ h6 {
 
     .right {
       margin-left: 75px;
+    }
+  }
+
+  ul.collapsed {
+    li {
+      margin-right: 30px;
     }
   }
 }
@@ -127,8 +132,28 @@ body.landing_page {
 }
 
 
+
+
+
 @media (max-width: 599px) {
-  .nav-item-right, .nav-item-left {
+  .navbar {
+
+    li.left, li.right {
+      display: none;
+    }
+
+    ul.logo-nav .logo img {
+      height: 85px;
+    }
+  }
+
+  ul.collapsed {
+    display: inline;
+  }
+}
+
+@media (min-width: 600px) {
+  ul.collapsed {
     display: none;
   }
 }

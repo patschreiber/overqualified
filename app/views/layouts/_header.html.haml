@@ -3,33 +3,14 @@
     %ul.logo-nav
       %li.left
         = link_to "BROWSE", "#"
-      %li
-        = link_to root_path, :id => "logo" do
+      %li.logo
+        = link_to root_path do
           = image_tag("branding/OQ_fulllogo.svg")
       %li.right
         = link_to "BUY", "#"
 
-
-
-
-
-
-
--#    - if user_signed_in?
--#      .collapse.navbar-collapse#collapsed-header
--#        %ul{ :class => "nav navbar-nav navbar-right" }
--#          %li
--#            %p{ :class => "navbar-text" }
--#              Welcome, user
--#
--#    - else
--#      .collapse.navbar-collapse#collapsed-header
--#        %ul{ :class => "nav navbar-nav" }
--#          %li
--#            = link_to "SHIRTS", "#"
--#          %li
--#            = link_to "SHOP", "#"
--#          %li
--#            = link_to "SHOP", "#"
--#          %li 
--#            = link_to "SHOP", "#"
+    %ul.collapsed
+      %li
+        = link_to "BROWSE", "#"
+      %li
+        = link_to "BUY", "#"
