@@ -1,10 +1,9 @@
 %nav{ :class => "navbar navbar-default navbar-fixed-top" }
-  .container-fluid
-    %ul.logo-nav
-      %li.left
-        = link_to "BROWSE", "#"
-      %li.logo
-        = link_to root_path do
-          = image_tag("branding/OQ_fulllogo.svg")
-      %li.right
-        = link_to "BUY", "#"
+  .container
+    = link_to "#", :class => "left" do
+      BROWSE
+    .logo.text-center
+      = link_to root_path do
+        = image_tag("branding/OQ_fulllogo.svg")
+    = link_to "#", :class => "right" do
+      BUY

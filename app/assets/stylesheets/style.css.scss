@@ -2,7 +2,7 @@
 @import 'colors';
 @import 'fonts';
 
-$current_nav_height: 100px;
+$current_nav_height: 80px;
 
 html, body {
   height: 100%;
@@ -51,70 +51,70 @@ h6 {
 
 
 .navbar {
+  padding: 0;
   height: $current_nav_height;
   border-bottom: 1px solid $main_green;
 
-  a { 
+  .container {
+    position: relative;
+    padding: 0;
+    width: 80%;
+  }
+
+  a {
+    height: $current_nav_height;
+    width: 110px;
+    display: inline-block;
+    color: $link_color;
+    font-size: 18px;
+  }
+
+  .logo {
+    img {
+      height: $current_nav_height;
+    }
+  }
+
+  .left, .right {
+    padding: ($current_nav_height / 3) 0;
+    text-align: center;
+    background-color: rgba(darken(#fff, 3%), 0);
+    border-bottom: 1px solid $main_green;
+    transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -o-transition: background .25s ease-in-out;
 
     &:hover {
-      text-decoration: none;
+      background-color: rgba(darken(#fff, 3%), 1);
     }
   }
 
-  .container-fluid {
-    padding: 0;
-
-    ul {
-      margin: 0 auto;
-    }
+  .left {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-
-  ul li {
-    display: inline;
-  }
-
-  ul.logo-nav {
-    text-align: center;
-    padding: 0;
-    width: 100%;
-
-    a {
-      font-size: 18px;
-    }
-
-    .logo {
-      img {
-        height: $current_nav_height;
-      }
-    }
-
-    .left {
-      margin-right: 75px;
-    }
-
-    .right {
-      margin-left: 75px;
-    }
-  }
-
-  ul.collapsed {
-    li {
-      margin-right: 30px;
-    }
+  .right {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
 .navbar-default {
   background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.65);  /*  You must change this in header.js */
+  background: rgba(255, 255, 255, 0.98);  /*  You must change this in header.js */
 }
 
 
 body.landing_page {
 
   .bg {
-    background: url(stock_photos/landscape_test_image.jpg) no-repeat center center;
-    background-size: 100%;
+    background: url(stock_photos/Varkala_Beach_High_Res-1.jpg) no-repeat center center;
+    background-size: cover;
     position: fixed;
     width: 100%;
     height: 650px; /*same height as jumbotron */
@@ -143,16 +143,6 @@ body.landing_page {
 
 
 @media (max-width: 599px) {
-  .navbar {
-    height: $current_nav_height - 15px;
-    li.left {
-      margin-right: 0px;
-    }
-
-    ul.logo-nav .logo img {
-      height: 85px;
-    }
-  }
 }
 
 
