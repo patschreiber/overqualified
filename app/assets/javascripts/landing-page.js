@@ -8,7 +8,10 @@ $(document).ready(function() {
   }
 
   $(window).on('scroll', function(e){
+
+    if( !Modernizr.touch ) {
       parallax();
+    }
   });
 
 });

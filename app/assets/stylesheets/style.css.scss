@@ -9,6 +9,7 @@ html, body {
 }
 
 body {
+  color: $dark_bg_body_font_color;
   background-color: #000;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   
@@ -21,7 +22,6 @@ body {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-  color: #FFF;
   font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -54,10 +54,6 @@ h6 {
   height: $current_nav_height;
   border-bottom: 4px solid $main_green;
 
-  a {
-    font-size: 18px;
-  }
-
   .container-fluid {
     padding: 0;
 
@@ -74,6 +70,10 @@ h6 {
     text-align: center;
     padding: 0;
     width: 100%;
+
+    a {
+      font-size: 18px;
+    }
 
     .logo {
       img {
@@ -107,7 +107,7 @@ body.landing_page {
 
   .bg {
     background: url(stock_photos/landscape_test_image.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 100%;
     position: fixed;
     width: 100%;
     height: 650px; /*same height as jumbotron */
@@ -119,7 +119,7 @@ body.landing_page {
   .main-jumbotron {
     padding-top: $current_nav_height + 30px;
     height: 650px;
-    color: #FFF;
+    color: $dark_bg_body_font_color;
     background: transparent;
     margin: 0;
 
@@ -137,24 +137,14 @@ body.landing_page {
 
 @media (max-width: 599px) {
   .navbar {
-
-    li.left, li.right {
-      display: none;
+    height: $current_nav_height - 35px;
+    li.left {
+      margin-right: 0px;
     }
 
     ul.logo-nav .logo img {
       height: 85px;
     }
-  }
-
-  ul.collapsed {
-    display: inline;
-  }
-}
-
-@media (min-width: 600px) {
-  ul.collapsed {
-    display: none;
   }
 }
 
