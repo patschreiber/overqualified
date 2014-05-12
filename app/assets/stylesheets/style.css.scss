@@ -2,7 +2,7 @@
 @import 'colors';
 @import 'fonts';
 
-$current_nav_height: 125px;
+$current_nav_height: 100px;
 
 html, body {
   height: 100%;
@@ -52,7 +52,14 @@ h6 {
 
 .navbar {
   height: $current_nav_height;
-  border-bottom: 4px solid $main_green;
+  border-bottom: 1px solid $main_green;
+
+  a { 
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   .container-fluid {
     padding: 0;
@@ -99,7 +106,7 @@ h6 {
 
 .navbar-default {
   background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.65);  /*  You must change this in header.js */
 }
 
 
@@ -137,7 +144,7 @@ body.landing_page {
 
 @media (max-width: 599px) {
   .navbar {
-    height: $current_nav_height - 35px;
+    height: $current_nav_height - 15px;
     li.left {
       margin-right: 0px;
     }
