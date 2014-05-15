@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-  color: $dark_bg_body_font_color;
+  color: $body_font_color;
   background-color: #000;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   
@@ -126,7 +126,7 @@ body.landing_page {
   .main-jumbotron {
     padding-top: $current_nav_height + 30px;
     height: 650px;
-    color: $dark_bg_body_font_color;
+    color: $body_font_color;
     background: transparent;
     margin: 0;
 
@@ -135,11 +135,71 @@ body.landing_page {
       background-color: #000;
       font-family: Helvetica, Arial, sans-serif;
     }
+
+    .marketing-blurb-md-lg {
+      position: relative;
+      bottom:-143px;
+      left:0;
+      color: $body_font_color;
+      font-size: 112px;
+
+      .subheader {
+        font-size: 20px;
+      }
+
+      &:hover {
+
+      }
+    }
+
+    .marketing-blurb-sm {
+      position: relative;
+      bottom:-178px;
+      left:0;
+      color: $body_font_color;
+      font-size: 80px;
+
+      .subheader {
+        font-size: 20px;
+      }
+
+      &:hover {
+
+      }
+    }
+
+    .marketing-blurb-xs {
+      position: relative;
+      bottom:-264px;
+      left:0;
+      color: $body_font_color;
+      font-size: 45px;
+
+      .subheader {
+        font-size: 20px;
+      }
+
+      &:hover {
+
+      }
+    }
+
+    @media (max-width: 473px) {
+      .marketing-blurb-xs {
+        display: none !important;
+      }
+    }
+
   }
 
-  section.light {
-    background-color: #fff;
+  .sections section:nth-child(even) {
+    background-color: #000;
     color: $body_font_color;
+  }
+
+  .sections section:nth-child(odd) {
+    background-color: #FFF;
+    color: $dark_body_font_color;
   }
 }
 

@@ -3,7 +3,7 @@
 .bg
 .jumbotron.main-jumbotron
   .container-fluid
-    .col-sm-6.col-md-6.col-lg-6
+    .col-sm-6
       %h1
         No
         %br
@@ -11,36 +11,44 @@
         %br
         Exp-
         %br
-        erience
+        erience?
+    .col-xs-12
+      .marketing-blurb-md-lg.text-center.visible-md.visible-lg
+        ALL SHIRTS $12
+      .marketing-blurb-sm.text-center.visible-sm
+        ALL SHIRTS $12
+      .marketing-blurb-xs.text-center.visible-xs
+        ALL SHIRTS $12
 
 
-%section.light
-  .container
-    .row
+.sections
+  %section
+    .container
+      .col-sm-6
+        %h1
+          Are you overqualified?
+        %h3
+          Yo yo yo yo sup welcome yeah
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+      .col-sm-6
+        = image_tag("stock_photos/portrait_test_image_1.jpg", :class => "img-responsive")
+
+
+  %section
+    .container
+      .col-sm-8
+        = image_tag("stock_photos/zoom-38518680-3.jpg", :class => "img-responsive")
+      .col-sm-4
+        %h1
+          When Your Answer Just Wasn't Good Enough....
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+  %section
+    .container
       %h1
-        Are you overqualified?
-
-    .col-sm-6.col-md-6.col-lg-6
-      %h3
-        Yo yo yo yo sup welcome yeah
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
-    .col-sm-6.col-md-6.col-lg-6
-      = image_tag("stock_photos/portrait_test_image_1.jpg")   
-
-
-%section
-  .container
-    .col-sm-8.col-md-6.col-lg-6
-      = image_tag("stock_photos/zoom-38518680-3.jpg")
-    .col-sm-4.col-md-6.col-lg-6
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-%section
-  .container
-    %h1
-      Section 3
-    .col-sm-6.col-md-6.col-lg-6
+        Section 3
+      .col-sm-6.col-md-6.col-lg-6
 
