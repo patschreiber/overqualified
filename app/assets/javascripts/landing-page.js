@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   var jumboHeight = $('.jumbotron').outerHeight();
-  console.log(jumboHeight);
   
   function parallax(){
       var scrolled = $(window).scrollTop();
