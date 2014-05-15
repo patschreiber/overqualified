@@ -136,6 +136,11 @@ body.landing_page {
       font-family: Helvetica, Arial, sans-serif;
     }
   }
+
+  section.light {
+    background-color: #fff;
+    color: $body_font_color;
+  }
 }
 
 
