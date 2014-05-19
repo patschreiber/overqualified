@@ -1,9 +1,9 @@
 @import 'bootstrap';
 @import 'colors';
 @import 'fonts';
+@import 'mixins';
 
 $current_nav_height: 80px;
-$current_section_padding: 75px 0 75px 0;
 
 html, body {
   height: 100%;
@@ -22,12 +22,22 @@ body {
   }
 }
 
+a {
+  color: #FFF;
+
+  &:hover {
+    color: #FFF;
+    text-decoration: none;
+    border-bottom: 1px solid $main_green;
+  }
+}
+
 p, h1, h2, h3, h4, h5, h6 {
-  font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, 'Open sans-serif', Arial, sans-serif;
+  font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 52px;
 }
 
 h2 {
@@ -50,21 +60,15 @@ h6 {
   font-size: 12px;
 }
 
-section.padded {
-  padding: $current_section_padding;
-}
-
-.font-fill {
-  background: -webkit-linear-gradient(transparent, transparent), url(background-text-fill.JPG) repeat;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+.breadcrumb {
+  background-color: inherit;
 }
 
 
 .navbar {
   padding: 0;
   height: $current_nav_height;
-  border-bottom: 3px solid $main_green;
+  border-bottom: 1px solid $main_green;
 
   .container {
     position: relative;
@@ -90,11 +94,8 @@ section.padded {
     padding: ($current_nav_height / 3) 0;
     text-align: center;
     background-color: rgba(darken(#fff, 3%), 0);
-    border-bottom: 3px solid $main_green;
-    transition: background .25s ease-in-out;
-    -webkit-transition: background .25s ease-in-out;
-    -moz-transition: background .25s ease-in-out;
-    -o-transition: background .25s ease-in-out;
+    border-bottom: 1px solid $main_green;
+    @include transition( background, .25s, ease-in-out );
 
     &:hover {
       background-color: rgba(darken(#fff, 3%), 1);
@@ -117,7 +118,19 @@ section.padded {
 
 .navbar-default {
   background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.95);  /*  You must change this in header.js */
+  background: rgba(255, 255, 255, 0.98);  /*  You must change this in header.js */
+}
+
+footer {
+  background-color: #000;
+
+  ul li {
+    list-style-type: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $main_green;
+  }
 }
 
 
@@ -128,7 +141,7 @@ body.landing_page {
     background-size: cover;
     position: fixed;
     width: 100%;
-    height: 90%; /*same height as jumbotron */
+    height: 650px; /*same height as jumbotron */
     top:0;
     left:0;
     z-index: -1;
@@ -136,7 +149,7 @@ body.landing_page {
 
   .main-jumbotron {
     padding-top: $current_nav_height + 30px;
-    height: 90%;
+    height: 650px;
     color: $body_font_color;
     background: transparent;
     margin: 0;
@@ -155,7 +168,7 @@ body.landing_page {
 
     .marketing-blurb-md-lg {
       position: relative;
-      bottom: -2px;
+      bottom: -4px;
       left: 0;
       font-size: 112px;
       line-height: 78px;
@@ -166,20 +179,27 @@ body.landing_page {
       position: relative;
       bottom: -2px;
       left: 0;
-      font-size: 82px;
-      line-height: 56px;
+      font-size: 80px;
+      line-height: 58px;
       z-index: -1;
     }
 
     .marketing-blurb-xs {
       position: relative;
-      bottom: 0px;
+      bottom: -1px;
       left: 0;
-      font-size: 46px;
+      font-size: 45px;
       line-height: 32px;
       z-index: -1;
     }
   }
+
+  @media (max-width: 473px) {
+    .marketing-section{
+      display: none !important;
+    }
+  }
+
 
   section.dark-section {
     background-color: #000;
@@ -196,11 +216,8 @@ body.landing_page {
 
 
 
-  @media (max-width: 400px) {
-    h1 {
-      font-size: 40px;
-    }
-  }
+@media (max-width: 599px) {
+}
 
 
 

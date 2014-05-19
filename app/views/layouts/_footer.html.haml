@@ -1,3 +1,47 @@
 %footer
   .container
-    .col-sm
+    .col-xs-12.col-sm-4
+      %h3
+        About Us
+      %ul
+        %li
+          = link_to "The Company", "#"
+        %li
+          = link_to "The People", "#"
+        %li
+          = link_to "Why we do it", "#"
+    .col-xs-12.col-sm-4
+      %h3
+        Shop
+      %ul
+        %li
+          New
+        %li
+          One of a Kinds (Defective/missprinted)
+        %li
+          Sizes
+        %li
+          Purchasing
+
+    .col-xs-12.col-sm-4
+      %h3
+        Support
+      %ul
+        %li
+          Contact Us
+        %li
+          Social Links
+        %li
+          Technical Assistance
+    .row
+      #epilogue.text-center
+        %ol.breadcrumb
+          %li
+            &copy; #{current_year}
+          %li
+            All Rights Reserved
+          %li
+            Privacy Policy
+          %li
+            Terms of Use
+
