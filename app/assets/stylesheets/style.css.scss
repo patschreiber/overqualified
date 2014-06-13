@@ -3,7 +3,7 @@
 @import 'fonts';
 @import 'mixins';
 
-$current_nav_height: 80px;
+$current_logo_height: 150px;
 $current_section_padding: 100px 0 100px 0;
 $current_section_padding_footer: 100px 0 0 0;
 $nav_menu_width: 240px;
@@ -66,28 +66,47 @@ section {
   padding: $current_section_padding;
 }
 
-.main-color-gradient {
-  background: #1b9dd8; /* Old browsers */
-  background: -moz-linear-gradient(top,  lighten($main_green, 10%) 0%, $main_green 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop( 0%, lighten($main_green, 10%) ), color-stop( 100%, $main_green )); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  lighten($main_green, 25%) 0%, $main_green 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  lighten($main_green, 10%) 0%, $main_green 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  lighten($main_green, 10%) 0%, $main_green 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  lighten($main_green, 10%) 0%, $main_green 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b9dd8', endColorstr='#2165ca',GradientType=0 ); /* IE6-9 */
+nav {
+  .nav-logo {
+    width: 100%;
+    height: $current_logo_height;
+
+    img {
+      height: $current_logo_height;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $main_green;
+  }
+
+  li {
+
+    a {
+      color: #FFF;
+
+      &:hover {
+        background-color: #FFF;
+        border-bottom: 1px solid $main_green;
+      }
+    }
+  }
+
+  .ss-icon {
+    font-size: 40px;
+    padding-right: 5px;
+  }
 }
 
 .nav-menu-body, 
 .nav-menu-open {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  @include transition(all, 0.3s, ease-in-out);
 }
 
 .nav-menu {
-  background-color: #000;
-  border-right: 1px solid $main_green; 
   position: fixed;
+  background-color: #000;
+  border-right: 4px solid $main_green; 
   top: 0;
   left: -$nav_menu_offset;
   height: 100%;
@@ -107,6 +126,13 @@ section {
 .nav-menu-open-body {
   overflow: hidden;
   left: $nav_menu_offset;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 
@@ -142,7 +168,6 @@ body.landing_page {
   }
 
   .main-jumbotron {
-    padding-top: $current_nav_height + 30px;
     height: 650px;
     color: $body_font_color;
     background: transparent;
