@@ -3,7 +3,7 @@
 @import 'fonts';
 @import 'mixins';
 
-$current_logo_height: 150px;
+$current_logo_height: 100px;
 $current_section_padding: 100px 0 100px 0;
 $current_section_padding_footer: 100px 0 0 0;
 $nav_menu_width: 240px;
@@ -15,7 +15,6 @@ html, body {
 }
 
 body {
-  overflow-x: hidden;
   position: relative;
   color: $body_font_color;
   background-color: #000;
@@ -76,31 +75,39 @@ nav {
     }
   }
 
+  #nav-menu-toggle {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: $main_green;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .ss-icon {
+      padding-top: 12px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+  }
+
   h1, h2, h3, h4, h5, h6 {
     color: $main_green;
   }
 
-  li {
+  .nav > li > a {
+    color: #FFF;
 
-    a {
-      color: #FFF;
-
-      &:hover {
-        background-color: #FFF;
-        border-bottom: 1px solid $main_green;
-      }
+    &:hover {
+      background-color: transparent;
     }
-  }
-
-  .ss-icon {
-    font-size: 40px;
-    padding-right: 5px;
   }
 }
 
 .nav-menu-body, 
 .nav-menu-open {
-  @include transition(all, 0.3s, ease-in-out);
+  @include transition(all, 0.3s, ease-in-out 0s);
 }
 
 .nav-menu {

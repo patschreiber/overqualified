@@ -1,9 +1,16 @@
 $(document).ready(function() {
-  $('nav').hoverIntent({
+  
+  if( Modernizr.touch ) {
+    $('#nav-menu-toggle').show();
+    $('nav').click(expand());
+  }
+  else {
+    $('nav').hoverIntent({
     over: expand,
     out: expand,
     interval: 50
-  });
+    });
+  }
 });
 
 function expand() {
