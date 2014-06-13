@@ -6,42 +6,29 @@
 $current_nav_height: 80px;
 $current_section_padding: 100px 0 100px 0;
 $current_section_padding_footer: 100px 0 0 0;
+$nav_menu_width: 240px;
+$nav_menu_offset: 190px;
 
 html, body {
+  min-width: 100%;
   height: 100%;
 }
 
 body {
+  overflow-x: hidden;
+  position: relative;
   color: $body_font_color;
   background-color: #000;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  
-  /* padding used for fixed top menu 
-  padding-top: $current_nav_height; */
-
-  p {
-    font-size: 18px;
-  }
+  font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #FFF;
+
 
   &:hover {
-    color: lighten($main_green, 35%);
-    text-decoration: none;
-    border-bottom: 1px solid $main_green;
   }
 }
 
-a.dark {
-  font-weight: bold;
-  color: lighten($main_green, 20%);
-
-  &:hover {
-    color: lighten($main_green, 5%);
-  }
-}
 
 p, h1, h2, h3, h4, h5, h6 {
   font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -90,61 +77,38 @@ section {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b9dd8', endColorstr='#2165ca',GradientType=0 ); /* IE6-9 */
 }
 
-.navbar {
-  padding: 0;
-  height: $current_nav_height;
-  border-bottom: 1px solid $main_green;
-
-  .container {
-    position: relative;
-    padding: 0;
-    width: 80%;
-  }
-
-  a {
-    height: $current_nav_height;
-    width: 110px;
-    display: inline-block;
-    color: $link_color;
-    font-size: 18px;
-  }
-
-  .logo {
-    img {
-      height: $current_nav_height;
-    }
-  }
-
-  .left, .right {
-    padding: ($current_nav_height / 3) 0;
-    text-align: center;
-    background-color: rgba(darken(#fff, 3%), 0);
-    border-bottom: 1px solid $main_green;
-    @include transition( background, .25s, ease-in-out );
-
-    &:hover {
-      background-color: rgba(darken(#fff, 3%), 1);
-    }
-  }
-
-  .left {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .right {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+.nav-menu-body, 
+.nav-menu-open {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.navbar-default {
-  background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.98);  /*  You must change this in header.js */
+.nav-menu {
+  background-color: #000;
+  border-right: 1px solid $main_green; 
+  position: fixed;
+  top: 0;
+  left: -$nav_menu_offset;
+  height: 100%;
+  width: $nav_menu_width;
+  z-index: 1000;
 }
+
+.nav-menu-open {
+  left: 0;
+}
+
+.nav-menu-body {
+  left: 0;
+  padding-left: 50px;
+}
+
+.nav-menu-open-body {
+  overflow: hidden;
+  left: $nav_menu_offset;
+}
+
 
 footer {
   padding: $current_section_padding_footer;
@@ -165,12 +129,6 @@ footer {
 
 
 body.landing_page {
-
-  .arrow-down {
-    position: absolute;
-    top: 625px;
-    left: 40%;
-  }
 
   .bg {
     background: url(stock_photos/Varkala_Beach_High_Res-1.jpg) no-repeat center center;
@@ -196,64 +154,21 @@ body.landing_page {
       font-family: Helvetica, Arial, sans-serif;
     }
   }
-
-  section.marketing-section {
-    background-color: transparent;
-    color: $body_font_color;
-    text-shadow: 0px 3px 6px rgba(70,70,70,0.8);
-
-    .marketing-blurb-md-lg {
-      position: relative;
-      bottom: -4px;
-      left: 0;
-      font-size: 112px;
-      line-height: 78px;
-      z-index: -1;
-    }
-
-    .marketing-blurb-sm {
-      position: relative;
-      bottom: -2px;
-      left: 0;
-      font-size: 80px;
-      line-height: 58px;
-      z-index: -1;
-    }
-
-    .marketing-blurb-xs {
-      position: relative;
-      bottom: -1px;
-      left: 0;
-      font-size: 45px;
-      line-height: 32px;
-      z-index: -1;
-    }
-  }
-
-  @media (max-width: 473px) {
-    .marketing-section{
-      display: none !important;
-    }
-  }
-
-
-  section.dark-section {
-    background-color: #000;
-    color: $body_font_color;
-  }
-
-  section.light-section {
-    background-color: #FFF;
-    color: $dark_body_font_color;
-  }
 }
 
 
 
 
 
-@media (max-width: 599px) {
-}
+
+
+
+
+
+
+
+
+
 
 
 
