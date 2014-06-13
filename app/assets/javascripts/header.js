@@ -2,21 +2,18 @@ $(document).ready(function() {
   
   if( Modernizr.touch ) {
     $('#nav-menu-toggle').show();
-    $('nav').click(expand());
+    $('#nav-menu-toggle').click(mobileExpand);
   }
   else {
-    $('nav').hoverIntent({
-    over: expand,
-    out: expand,
-    interval: 50
-    });
+    $('nav').hover(expand);
   }
 });
 
 function expand() {
-  $('.nav-menu').toggleClass("nav-menu-open");
   $('body').toggleClass("nav-menu-open-body");
 }
 
-//    $('.nav-menu').toggleClass("nav-menu-open");
-   // $('body').toggleClass("nav-menu-open-body");
+function mobileExpand() {
+  $('nav').toggleClass("nav-menu-open-mobile");
+  $('body').toggleClass("nav-menu-open-body-mobile");
+}

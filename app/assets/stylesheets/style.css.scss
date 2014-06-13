@@ -106,7 +106,7 @@ nav {
 }
 
 .nav-menu-body, 
-.nav-menu-open {
+.nav-menu {
   @include transition(all, 0.3s, ease-in-out 0s);
 }
 
@@ -119,10 +119,10 @@ nav {
   height: 100%;
   width: $nav_menu_width;
   z-index: 1000;
-}
 
-.nav-menu-open {
-  left: 0;
+  &:hover {
+    left: 0;
+  }
 }
 
 .nav-menu-body {
@@ -135,6 +135,13 @@ nav {
   left: $nav_menu_offset;
 }
 
+.nav-menu-open-body-mobile {
+  left: $nav_menu_offset; 
+}
+
+.nav-menu-open-mobile {
+  left: 0;
+}
 
 .footer {
   position: absolute;
@@ -187,8 +194,6 @@ body.landing_page {
     }
   }
 }
-
-
 
 
 
