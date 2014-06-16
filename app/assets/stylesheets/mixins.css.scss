@@ -6,3 +6,9 @@
   -moz-transition: $type $duration #{$ease};
   -o-transition: $type $duration #{$ease};
 }
+
+
+// Mixin for CSS Hover darken
+@mixin darken($color) {
+  color: darken($color, 15%);
+} 

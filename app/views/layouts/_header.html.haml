@@ -1,42 +1,39 @@
-%nav.nav-menu
-  #nav-menu-toggle
-    .ss-icon.ss-navigateleft
+.visible-sm.visible-md.visible-lg
+  %nav.nav-menu
 
-  .nav-logo.text-center
-    = image_tag("branding/OQ_fulllogo_white.svg")
-  .slogan
+    .nav-logo.text-center
+      = image_tag("branding/OQ_fulllogo_white.svg")
+    .slogan
 
-  %h5
-    LOOKBOOK
-  %h5
-    T-SHIRTS
-    %span.ss-icon
-  %ul.nav.nav-stacked.text-center
-    %li
-      = link_to "Gents", "#"
-    %li
-      = link_to "Gals", "#"
-  
-  %h5
-    ACCESSORIES
-  %ul.nav.nav-stacked.text-center
-    %li
-      = link_to "Menu 1", "#"
-    %li
-      = link_to "Menu 2", "#"
+    %ul.nav.nav-stacked
+      %li.nav-li-header
+        = link_to "LOOKBOOK", "#"
+      %li.nav-li-header
+        = link_to "T-SHIRTS", "#"
+      %li.text-center
+        = link_to "Gents", "#"
+      %li.text-center
+        = link_to "Gals", "#"
 
-  %h5
-    ABOUT
-  %h5
-    SUPPORT
-  %ul.nav.nav-stacked.text-center
-    %li
-      = link_to "Menu 1", "#"
-    %li
-      = link_to "Menu 2", "#"
+      %li.nav-li-header
+        = link_to "ACCESSORIES", "#"
+      %li.text-center
+        = link_to "Menu 1", "#"
+      %li.text-center
+        = link_to "Menu 2", "#"
 
+      %li.nav-li-header
+        = link_to "ABOUT", "#"
+      %li.nav-li-header
+        = link_to "SUPPORT", "#"
+      %li.text-center
+        = link_to "Menu 1", "#"
+      %li.text-center
+        = link_to "Menu 2", "#"
 
-  .footer
-    .row
-      .col-md-12
-        Yo
+    .col-sm-12
+      .footer
+        .row
+          .col-md-12
+            Yo
+.visible-xs

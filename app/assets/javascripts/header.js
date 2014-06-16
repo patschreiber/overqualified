@@ -12,8 +12,3 @@ $(document).ready(function() {
 function expand() {
   $('body').toggleClass("nav-menu-open-body");
 }
-
-function mobileExpand() {
-  $('nav').toggleClass("nav-menu-open-mobile");
-  $('body').toggleClass("nav-menu-open-body-mobile");
-}
