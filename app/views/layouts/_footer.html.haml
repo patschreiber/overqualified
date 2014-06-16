@@ -6,11 +6,11 @@
           About Us
         %ul
           %li
-            = link_to "The Company", "#"
+            = link_to "The Company", about_path, :anchor => 'company'
           %li
-            = link_to "The People", "#"
+            = link_to "The People", about_path, :anchor => 'people'
           %li
-            = link_to "Why we do it", "#"
+            = link_to "Why we do it", about_path, :anchor => 'why'
       .col-xs-12.col-sm-4
         %h3
           Shop
@@ -31,7 +31,7 @@
           %li
             Contact Us
           %li
-            Social Links
+            = render "shared/social_links"
           %li
             Technical Assistance
     .row
@@ -42,5 +42,5 @@
           %li
             All Rights Reserved
           %li
-            = link_to "Terms of Use", "#", :class => "dark"
+            = link_to "Terms of Use", terms_path
 

@@ -2,7 +2,8 @@
   %nav.nav-menu
 
     .nav-logo.text-center
-      = image_tag("branding/OQ_fulllogo_white.svg")
+      = link_to root_path do
+        = image_tag("branding/OQ_fulllogo_white.svg")
     .slogan
 
     %ul.nav.nav-stacked
@@ -27,10 +28,13 @@
         = link_to "Menu 2", "#"
 
       %li.nav-li-header
-        = link_to "ABOUT US", "#"
+        = link_to "ABOUT US", about_path
       %li.nav-li-header
         = link_to "SUPPORT", "#"
       %li.text-center
         = link_to "Contact Us", "#"
+
+    .col-md-12
+      = render "shared/social_links"
 
 .visible-xs

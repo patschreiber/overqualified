@@ -17,6 +17,8 @@ Overqualified::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'landing_page#index'
+  match '/about-us' => 'pages#about', via: 'get', :as => :about
+  match '/terms-of-use' => 'pages#terms', via: 'get', :as => :terms
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
