@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'haml'
 gem 'devise'
 gem 'mysql2'
+gem 'figaro'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
