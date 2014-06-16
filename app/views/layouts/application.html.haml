@@ -11,6 +11,7 @@
     %meta{ :content => "width=device-width", :name => "viewport", "initial-scale" => 1.0 }
     - if content_for?(:meta_description)
       %meta{ :content => yield(:meta_description), :name => "description" }
+    = render 'shared/google_analytics'
 
     = render 'layouts/header'
   %body{ :class => "#{ yield (:body_class)} nav-menu-body" }
