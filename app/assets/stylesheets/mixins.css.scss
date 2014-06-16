@@ -1,10 +1,10 @@
 
 // Mixin for CSS transitions
 @mixin transition($type, $duration, $ease: "") {
-  transition: $type$type $duration #{$ease};
-  -webkit-transition: $type $duration #{$ease};
-  -moz-transition: $type $duration #{$ease};
-  -o-transition: $type $duration #{$ease};
+  -webkit-transition: $type $duration #{$ease} 0s;
+  -moz-transition: $type $duration #{$ease} 0s;
+  -o-transition: $type $duration #{$ease} 0s;
+  transition: $type$type $duration #{$ease} 0s;
 }
 
 

@@ -11,4 +11,10 @@ module ApplicationHelper
   def current_year
     DateTime.now.strftime( "%Y" )
   end
+
+  def facebook_url
+  end
+
+  def twitter_url
+  end
 end

@@ -91,6 +91,10 @@ nav {
     img {
       height: $current_logo_height;
     }
+
+    a:hover {
+      border: 0;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -122,7 +126,7 @@ nav {
 
 nav,
 .nav-menu-body  {
-  @include transition(all, 0.3s, ease-in-out 0s);
+  @include transition(all, 0.3s, ease-in-out);
 }
 
 .nav-menu-body {
@@ -143,6 +147,20 @@ nav,
   left: 0;
 }
 
+.collapsed-nav-logo {
+  font-size: 52px;
+  margin: 20px;
+  opacity: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  @include transition(all, 0.5s, ease-in-out);
+}
+
+.collapsed-nav-logo-hover {
+  opacity: 0;
+  left: -190px;
+}
 
 footer {
   padding: $current_section_padding_footer;
