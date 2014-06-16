@@ -1,12 +1,6 @@
 $(document).ready(function() {
   
-  if( Modernizr.touch ) {
-    $('#nav-menu-toggle').show();
-    $('#nav-menu-toggle').click(mobileExpand);
-  }
-  else {
-    $('nav').hover(expand);
-  }
+  $('nav').hover(expand);
 });
 
 function expand() {

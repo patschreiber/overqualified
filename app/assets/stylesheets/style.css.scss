@@ -70,6 +70,19 @@ section {
 
 nav {
   background: rgba(0,0,0, 0.8);
+  border-right: 4px solid $main_color;
+  position: fixed;
+  top: 0;
+  left: -$nav_menu_offset;
+  height: 100%;
+  width: $nav_menu_width;
+  overflow-y: auto; 
+  z-index: 1000;
+  @include transition(all, 0.3s, ease-in-out 0s);
+
+  &:hover {
+    left: 0;
+  }
 
   .nav-logo {
     width: 100%;
@@ -107,23 +120,9 @@ nav {
   }
 }
 
-.nav-menu-body, 
-.nav-menu {
+nav,
+.nav-menu-body  {
   @include transition(all, 0.3s, ease-in-out 0s);
-}
-
-.nav-menu {
-  position: fixed;
-  border-right: 4px solid $main_color; 
-  top: 0;
-  left: -$nav_menu_offset;
-  height: 100%;
-  width: $nav_menu_width;
-  z-index: 1000;
-
-  &:hover {
-    left: 0;
-  }
 }
 
 .nav-menu-body {
@@ -142,12 +141,6 @@ nav {
 
 .nav-menu-open-mobile {
   left: 0;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 
