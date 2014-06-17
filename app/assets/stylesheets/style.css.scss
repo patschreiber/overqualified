@@ -19,6 +19,8 @@ body {
   color: $body_font_color;
   background-color: #000;
   font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  left: 0;
+  padding-left: 50px;
 }
 
 a {
@@ -78,7 +80,7 @@ nav {
   width: $nav_menu_width;
   overflow-y: auto; 
   z-index: 1000;
-  @include transition(all, 0.3s, ease-in-out 0s);
+  @include transition(all, 0.3s, ease-in-out);
 
   &:hover {
     left: 0;
@@ -125,26 +127,14 @@ nav {
 }
 
 nav,
-.nav-menu-body  {
+body,
+.nav-menu-collapsed {
   @include transition(all, 0.3s, ease-in-out);
 }
 
-.nav-menu-body {
-  left: 0;
-  padding-left: 50px;
-}
-
-.nav-menu-open-body {
-  overflow: hidden;
+.nav-menu-collapsed {
   left: $nav_menu_offset;
-}
-
-.nav-menu-open-body-mobile {
-  left: $nav_menu_offset; 
-}
-
-.nav-menu-open-mobile {
-  left: 0;
+  padding-left: 50px;
 }
 
 .collapsed-nav-logo {

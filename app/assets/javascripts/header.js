@@ -4,6 +4,6 @@ $(document).ready(function() {
 });
 
 function expand() {
-  $('body').toggleClass("nav-menu-open-body");
+  $('body').toggleClass("nav-menu-collapsed");
   $('.collapsed-nav-logo').toggleClass("collapsed-nav-logo-hover");
 }
