@@ -20,6 +20,8 @@ Overqualified::Application.routes.draw do
   match '/about-us' => 'pages#about', via: 'get', :as => :about
   match '/terms-of-use' => 'pages#terms', via: 'get', :as => :terms
 
+  match '/shop' => 'shop#index', via: ['get', 'post'], :as => :shop
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
