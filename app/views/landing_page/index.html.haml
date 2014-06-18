@@ -2,8 +2,19 @@
 
 .content-panel
   .bg
-  .collapsed-nav-logo
-    Overqualified.
+  .visible-sm.visible-md.visible-lg
+    .collapsed-side-nav
+      %h1
+        Overqualified.
+      %ul.list-inline.collapsed-side-nav-menu
+        %li.new
+          = link_to "New", "#"
+        %li
+          = link_to "Shop", shop_path
+        %li
+          = link_to "Men's", "#"
+        %li
+          = link_to "Women's", "#"
   .jumbotron.main-jumbotron
     .container-fluid
       .col-sm-6

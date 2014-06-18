@@ -70,6 +70,12 @@ section {
   padding: $current_section_padding;
 }
 
+
+
+/* ===============================
+            Navigation
+================================== */          
+
 nav {
   background: rgba(0,0,0, 0.8);
   border-right: 4px solid $main_color;
@@ -137,20 +143,64 @@ body,
   padding-left: 50px;
 }
 
-.collapsed-nav-logo {
-  font-size: 52px;
+.collapsed-side-nav {
   margin: 20px;
   opacity: 1;
   position: relative;
   top: 0;
   left: 0;
   @include transition(all, 0.5s, ease-in-out);
+
+  .collapsed-side-nav-menu {
+    li {
+      font-size: 18px;
+    }
+  }
 }
 
-.collapsed-nav-logo-hover {
+.collapsed-side-nav-hover {
   opacity: 0;
   left: -190px;
 }
+
+
+#mobile-navbar {
+
+  .navbar {
+    background: rgba(0,0,0, 0.8);
+  
+    .navbar-brand {
+      color: #FFF;
+      &:hover {
+        border: 0;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-radius: 0px;
+  }
+
+  #mobile-navbar-menu {
+    display: none;
+
+    li > a {
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: transparent;
+        border-top: 1px solid $main_color;
+        border-bottom: 1px solid $main_color;
+      }
+    }
+  }
+}
+
+
+
+/* ===============================
+            Footer
+================================== */   
 
 footer {
   padding: $current_section_padding_footer;
@@ -169,6 +219,11 @@ footer {
   }
 }
 
+
+
+/* ===============================
+            Body Styles
+================================== */   
 
 body.landing_page {
 
@@ -199,6 +254,16 @@ body.landing_page {
 
 
 
+/* ===============================
+            Media Queries
+================================== */   
+
+@media screen and ( max-width: 768px ) {
+  body {
+    padding-left: 0;
+    padding-top: 56px; /* To clear the mobile nav header */
+  }
+}
 
 
 
