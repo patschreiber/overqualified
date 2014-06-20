@@ -8,6 +8,7 @@ $current_section_padding: 100px 0 100px 0;
 $current_section_padding_footer: 100px 0 0 0;
 $nav_menu_width: 240px;
 $nav_menu_offset: 190px;
+$right_menu_width: 240px;
 
 html, body {
   min-width: 100%;
@@ -21,6 +22,7 @@ body {
   font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
   left: 0;
   padding-left: 50px;
+  padding-right: $right_menu_width;
 }
 
 a {
@@ -194,6 +196,21 @@ body,
       }
     }
   }
+}
+
+
+/* ===============================
+            Right Sidebar
+================================== */
+
+.right-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $right_menu_width;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
 }
 
 

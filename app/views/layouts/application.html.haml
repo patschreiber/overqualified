@@ -15,8 +15,9 @@
       %meta{ :content => "Shop Overqualified - apparel and accessories for the stylish white-collar wannabe.", :name => "description" }
     = render 'shared/google_analytics'
 
-    = render 'layouts/header'
   %body{ :class => "#{ yield (:body_class)}" }
+    = render 'layouts/header'
+    = render 'layouts/right_sidebar'
     - if flash[:notice]
       .row
         .alert.alert-warning.alert-dismissable.text-center

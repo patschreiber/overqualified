@@ -1,7 +1,7 @@
 - content_for :body_class, "landing_page"
 
+.bg
 .content-panel
-  .bg
   .visible-sm.visible-md.visible-lg
     .collapsed-side-nav
       %h1
@@ -31,38 +31,13 @@
 
   %section
     .container-fluid
-      .row
-        %h1.font-fill.text-center
-          Are you overqualified?
-      .row
-        .col-md-8.col-md-offset-2
-          %p
-            You don't really need to be in real life, you can fake it 'till you make it. We make no 
-            = link_to "outrageous claims--", "#", :class => "dark"
-            these shirts will not give you the skills you need to make it
-      .row
-        = image_tag "http://placehold.it/150x50", :class => "arrow-down"
+      .col-md-4.text-center
+        = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
+      .col-md-4.text-center
+        = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
+      .col-md-4.text-center
+        = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
 
-
-  %section
-    .container
-      .row
-        %h1.text-center
-          Yeah
-        .col-md-8.col-md-offset-2
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-  %section
-    .container-fluid
-      %h1.text-center
-        When Your Answer Just Wasn't Good Enough...
-      .col-md-7
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      .col-md-5.text-center
-        = image_tag "http://placehold.it/400x600", :class => "img-responsive"
 
 
   %section
