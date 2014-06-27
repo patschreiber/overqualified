@@ -31,12 +31,31 @@
 
   %section
     .container-fluid
-      .col-md-4.text-center
-        = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
-      .col-md-4.text-center
-        = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
-      .col-md-4.text-center
-        = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
+      .col-sm-4.text-center
+        = link_to "#" do
+          .thumbnail
+            = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
+            .caption
+              %h3
+                Shirt #1
+              %p
+                This is a pretty sweet caption.
+      .col-sm-4.text-center
+        .thumbnail
+          = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
+          .caption
+            %h3
+              Shirt #2
+            %p
+              This is also a sweet caption. I really like this caption lol. 
+      .col-sm-4.text-center
+        .thumbnail
+          = image_tag "stock_photos/portrait_test_image_1.jpg", :class => "img-responsive"
+          .caption
+            %h3
+              Shirt #3
+            %p
+              This is also a sweet caption. I really like this caption lol. 
 
 
 
