@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620185146) do
+ActiveRecord::Schema.define(version: 20140709090109) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.boolean  "gender"
+    t.string   "gender"
+    t.string   "size"
     t.string   "brand"
     t.string   "img_url"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "items", ["size"], name: "index_items_on_size", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
