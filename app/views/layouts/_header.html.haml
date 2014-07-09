@@ -8,31 +8,48 @@
 
     %ul.nav.nav-stacked
       %li.nav-li-header
-        = link_to "LOOKBOOK", lookbook_path
+        = link_to lookbook_path do
+          LOOKBOOK
+          %span.ss-icon.ss-openbook.pull-right
       %li.nav-li-header
-        = link_to "SHOP", shop_path
+        = link_to shop_path do
+          SHOP
+          %span.ss-icon.ss-cart.pull-right
       %li.text-center.new
-        = link_to "New", "#"
+        = link_to "#" do
+          New
+          %span.new-icon.pull-right
+            NEW
       %li.text-center
-        = link_to "Gents", "#"
+        = link_to "#" do
+          Gents
+          %span.ss-icon.ss-user.pull-right
       %li.text-center
-        = link_to "Gals", "#"
+        = link_to "#" do
+          Gals
+          %span.ss-icon.ss-femaleuser.pull-right
       %li.text-center
-        = link_to "One of a Kinds", "#"
+        = link_to "#" do
+          One of a kinds
+          %span.ss-icon.ss-flask.pull-right
 
       %li.nav-li-header
-        = link_to "ACCESSORIES", "#"
-      %li.text-center
-        = link_to "Menu 1", "#"
-      %li.text-center
-        = link_to "Menu 2", "#"
+        = link_to "#" do
+          ACCESSORIES
+          %span.ss-icon.ss-stopwatch.pull-right
 
       %li.nav-li-header
-        = link_to "ABOUT US", about_path
+        = link_to about_path do
+          ABOUT US
+          %span.ss-icon.ss-font.pull-right
       %li.nav-li-header
-        = link_to "SUPPORT", "#"
+        = link_to "#" do
+          SUPPORT
+          %span.ss-icon.ss-info.pull-right
       %li.text-center
-        = link_to "Contact Us", "#"
+        = link_to "#" do
+          Contact Us
+          %span.ss-icon.ss-phone.pull-right
 
     .col-md-12
       = render "shared/social_links"

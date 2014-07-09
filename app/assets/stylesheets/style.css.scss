@@ -151,6 +151,7 @@ nav {
   .nav > li > a {
     color: #FFF;
     border: 1px solid transparent;
+    padding-right: 0;
 
     &:hover {
       @include darken(#FFF);
@@ -159,6 +160,16 @@ nav {
       border-top: 1px solid $main_color;
       border-bottom: 1px solid $main_color;
     }
+  }
+
+  .ss-icon {
+    font-size: 22px;
+    padding-right: 10px;
+  }
+
+  .new-icon {
+    font-family: Impact, serif;
+    padding-right: 10px;
   }
 }
 
