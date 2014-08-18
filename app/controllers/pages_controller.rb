@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def about
-    @header = "Meet us"
+    @header = "The pleasure is all ours..."
   end
 
   def lookbook

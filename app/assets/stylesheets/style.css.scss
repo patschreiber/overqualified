@@ -5,6 +5,7 @@
 
 $current_logo_height: 100px;
 $current_section_padding: 100px 0 100px 0;
+$current_section_small_padding: 75px 0 75px 0;
 $current_section_padding_footer: 100px 0 0 0;
 $nav_menu_width: 240px;
 $nav_menu_offset: 190px;
@@ -35,6 +36,10 @@ a {
   }
 }
 
+/* Centers image for imgages with img-responsive bootstrap class */
+.img-center {
+  margin: 0 auto;
+}
 
 p, h1, h2, h3, h4, h5, h6 {
   font-family: "ProximaNova-Light", 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -70,6 +75,10 @@ h6 {
 
 section {
   padding: $current_section_padding;
+}
+
+.small-section {
+  padding: $current_section_small_padding;
 }
 
 .thumbnail {
