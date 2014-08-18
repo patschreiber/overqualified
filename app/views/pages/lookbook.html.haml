@@ -1,2 +1,21 @@
-.container-fluid
-  
+- content_for :title, "Lookbook"
+- content_for :body_class, "lookbook"
+
+- if @header.present?
+  = render "shared/page_header", :locals => {@header => @header}
+
+.jumbotron
+  %h1
+    Look 1
+.jumbotron
+  %h1
+    Look 2
+.jumbotron
+  %h1
+    Look 3
+.jumbotron
+  %h1
+    Look 4
+.jumbotron
+  %h1
+    Look 5

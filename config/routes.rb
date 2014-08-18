@@ -22,6 +22,10 @@ Overqualified::Application.routes.draw do
   match '/terms-of-use' => 'pages#terms', via: 'get', :as => :terms
 
   match '/shop' => 'shop#index', via: ['get', 'post'], :as => :shop
+  match '/new' => 'shop#new', via: ['get', 'post'], :as => :shop_new
+  match '/gents' => 'shop#gents', via: ['get', 'post'], :as => :shop_gents
+  match '/gals' => 'shop#gals', via: ['get', 'post'], :as => :shop_gals
+  match '/one-of-a-kinds' => 'shop#uniques', via: ['get', 'post'], :as => :shop_uniques
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

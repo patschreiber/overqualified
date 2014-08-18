@@ -80,6 +80,7 @@ section {
   background-color: #000;
 
   .caption {
+    height: 140px;
     color: #FFF;
   }
 
@@ -98,6 +99,13 @@ section {
   border-right: solid 40px #000;
   border-top: solid 40px #000;
   z-index: 3;
+}
+
+.shop-item {
+
+  &:hover {
+    border: 2px solid $main_color;
+  }
 }
 
 
@@ -307,6 +315,18 @@ body.landing_page {
     }
   }
 }
+
+body.lookbook {
+  .jumbotron {
+    margin: 0;
+  }
+}
+
+body.about {
+  color: #333;
+  background-color: #FFF;
+}
+
 
 
 
