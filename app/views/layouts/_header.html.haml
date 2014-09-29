@@ -8,6 +8,15 @@
 
     %ul.nav.nav-stacked
       %li.nav-li-header
+        - if user_signed_in?
+          = link_to "#" do
+            YOUR ACCOUNT
+            %span.ss-icon.ss-home.pull-right
+        - else
+          = link_to sign_in_path do
+            YOUR ACCOUNT
+            %span.ss-icon.ss-home.pull-right
+      %li.nav-li-header
         = link_to lookbook_path do
           LOOKBOOK
           %span.ss-icon.ss-openbook.pull-right
@@ -32,12 +41,6 @@
         = link_to shop_uniques_path do
           One of a kinds
           %span.ss-icon.ss-flask.pull-right
-
-      %li.nav-li-header
-        = link_to "#" do
-          ACCESSORIES
-          %span.ss-icon.ss-stopwatch.pull-right
-
       %li.nav-li-header
         = link_to about_path do
           ABOUT US

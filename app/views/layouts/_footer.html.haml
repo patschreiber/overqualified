@@ -16,24 +16,27 @@
           Shop
         %ul
           %li
-            New
+            = link_to "New", shop_new_path
           %li
-            One of a Kinds (Defective/missprinted)
+            = link_to "Gents", shop_gents_path
           %li
-            Sizes
+            = link_to "Gals", shop_gals_path
           %li
-            Purchasing
+            = link_to "One of a Kinds (Defective/missprinted)", shop_uniques_path
+
 
       .col-xs-12.col-sm-4
         %h3
           Support
         %ul
           %li
-            Contact Us
+            = link_to "Your Account", "#"
+          %li
+            = link_to "Contact Us", contact_us_path
+          %li
+            = link_to "Help", "#"
           %li
             = render "shared/social_links"
-          %li
-            Technical Assistance
     .row
       #epilogue.text-center
         %ol.breadcrumb

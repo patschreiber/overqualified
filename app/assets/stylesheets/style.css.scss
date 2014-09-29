@@ -9,7 +9,7 @@ $current_section_small_padding: 75px 0 75px 0;
 $current_section_padding_footer: 100px 0 0 0;
 $nav_menu_width: 240px;
 $nav_menu_offset: 190px;
-$right_menu_width: 240px;
+$right_menu_width: 150px;
 
 html, body {
   min-width: 100%;
@@ -96,18 +96,6 @@ section {
   img {
     margin: 0;
   }
-}
-
-.top-right-triangle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: solid 40px transparent;
-  width: 0;
-  height: 0;
-  border-right: solid 40px #000;
-  border-top: solid 40px #000;
-  z-index: 3;
 }
 
 .shop-item {
