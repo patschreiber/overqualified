@@ -17,4 +17,10 @@ module ApplicationHelper
 
   def twitter_url
   end
+
+  def phone_number
+  end
+
+  def company_email
+  end
 end

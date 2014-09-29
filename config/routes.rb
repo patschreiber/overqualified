@@ -20,6 +20,7 @@ Overqualified::Application.routes.draw do
   match '/lookbook' => 'pages#lookbook', via: 'get', :as => :lookbook
   match '/about-us' => 'pages#about', via: 'get', :as => :about
   match '/terms-of-use' => 'pages#terms', via: 'get', :as => :terms
+  get 'contact_us' => 'pages#contact_us', :as => :contact_us
 
   match '/shop' => 'shop#index', via: ['get', 'post'], :as => :shop
   match '/new' => 'shop#new', via: ['get', 'post'], :as => :shop_new

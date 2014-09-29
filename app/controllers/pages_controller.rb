@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
   def terms
   end
+
+  def contact_us
+    @header = "We'd love to hear from you."
+  end
 end

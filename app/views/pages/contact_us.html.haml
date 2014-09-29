@@ -1,0 +1,27 @@
+- content_for :title, "Contact Us"
+- content_for :body_class, "contact-us"
+
+- if @header.present?
+  = render "shared/page_header", :locals => {@header => @header}
+
+.container-fluid
+  %section
+    .text-center
+      We just have to hear from you. Tell us how we're doing, what you'd like to see, what you don't want to see anymore. Feeling lonely on a Friday night? Drop us a line.
+      %table
+        %tbody
+          %tr
+            %td
+              Email
+            %td
+              patrick@getoverqualified.com
+          %tr
+            %td
+              Phone
+            %td
+              %tel
+                5555555555
+  %section
+    .text-center
+      Lorem ipsum dolor sit amet
+        
